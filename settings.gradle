@@ -1,1 +1,2 @@
 rootProject.name = 'quiz-director'
+include 'quiz-director-dto'
