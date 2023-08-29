@@ -1,0 +1,18 @@
+{
+  "sourceId": "source-id",
+  "questions": [
+    {
+      "question": "question",
+      "answers": [
+        "answer1",
+        "answer2"
+      ],
+      "correctAnswers": [
+        "answer"
+      ],
+      "category": "category",
+      "multiplyAnswers": false,
+      "difficulty": "EASY"
+    }
+  ]
+}

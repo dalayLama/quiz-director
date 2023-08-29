@@ -1,0 +1,49 @@
+security:
+  auth:
+    headers:
+      id-header-name: "Quiz-User-Id"
+      name-header-name: "Quiz-User-Name"
+      roles-header-name: "Quiz-User-Roles"
+      web-socket-token-id-header-name: "Token-Id"
+server:
+  port: 8080
+spring:
+  data:
+    mongodb:
+#      host: localhost
+#      database: quiz-games
+#      username: admin
+#      password: admin
+#      port: 27017
+      uri: mongodb://admin:admin@localhost:27017/quiz-games?authSource=admin
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: password
+
+async:
+  thread-pool-size: 3
+  max-thread-pool-size: 3
+  thread-queue-capacity: 50
+
+rabbitmq:
+  stomp-port: 61613
+  exchange-name: quiz-game-exchange
+  queues:
+    finished-games-queue: finished-games-queue
+
+websocket:
+  enable: true
+
+
+logging:
+  level:
+    org:
+      springframework:
+        web: TRACE
+        amqp: TRACE
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG

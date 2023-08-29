@@ -1,0 +1,9 @@
+#questions {
+	margin-top: 15px;
+}
+
+.question {
+	margin: 0 0 5px 0;
+	border-top: solid 1px;
+	padding: 5px;
+}

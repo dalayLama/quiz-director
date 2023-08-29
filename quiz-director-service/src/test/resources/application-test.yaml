@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+  main:
+    allow-bean-definition-overriding: true
+logging:
+  level:
+    org:
+      springframework:
+        web: TRACE
+        amqp: TRACE
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG
+websocket:
+  enable: false
